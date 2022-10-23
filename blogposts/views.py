@@ -9,5 +9,6 @@ def index(request):
     }
     return render(request, 'blogposts/template.html', context)
 
+
 def post(request):
     return render(request, 'blogposts/post.html')
