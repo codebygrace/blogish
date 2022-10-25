@@ -5,5 +5,11 @@
         <h1>{{ post.title }}</h1>
         <p>{{ post.author}} ({{ post.publish_date }})</p>
         <p>{{ post.text }}</p>
+
+        {% if user.is_authenticated and post.author.id == user.id %}
+            <a href="{% url 'edit_post' post.id %}" class="btn edit-btn">Edit Post</a>
+        {% endif %}
+        
+        <a href="{% url 'index' %}" class="btn home-btn">Home</a>
     </div>
 {% endblock %}

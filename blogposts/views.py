@@ -33,3 +33,16 @@ def new_post(request):
         'method': request.method
     }
     return render(request, 'blogposts/new_post.html', context)
+
+def edit_post(request, id):
+    post = Post.objects.get(id=id)
+    return render(request, 'blogposts/edit_post.html', {'post': post})
+
+def update_post(request, id):
+    if request.method == 'POST':
+        post = Post.objects.get(id=id)
+        post.title = request.POST.get('title')
+        post.author = request.user
+        post.text = request.POST.get('text')
+        post.save()
+    return redirect('/')

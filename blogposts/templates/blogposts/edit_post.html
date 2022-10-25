@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Edit Your Post</h1>
+        <form action="/post/{{ post.id }}/update" method="POST">
+            {% csrf_token %}
+            {% if request.method == 'GET' %}
+                <div class="form-row">
+                    <label>
+                        Title:
+                        <input type="text" name="title" value="{{ post.title }}" class="post-title">
+                    </label>
+                </div>
+                <div class="form-row">
+                    <p class="author">Author: <span class="user-box">{{ user }}</span></p>
+                </div>    
+                <div class="form-row">
+                    <label>
+                        Text:
+                        <textarea name="text" cols="30" rows="10" class="post-text">{{ post.text }}</textarea>
+                    </label>
+                </div>
+            {% endif %}
+            <button type="submit" class="btn save-btn">Save</button>
+        </form>
+    </div>
+{% endblock %}
