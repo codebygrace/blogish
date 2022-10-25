@@ -10,7 +10,7 @@
     {% block content %}
         {% if request.user.is_authenticated %}
             <h4 class="welcome">
-                Welcome to Red Monstera!
+                Welcome to Blog-ish!
             </h4>
             <p class="you-are">You are logged in as {{ request.user.username }}.<a href="{% url 'auth_logout' %}" class="not-you">Not you?</a></p>
 
@@ -29,7 +29,7 @@
             </div>
         {% else %}
             <h4 class="welcome">
-                Welcome to Red Monstera!
+                Welcome to Blog-ish!
             </h4>
 
             <p class="login-cta">
