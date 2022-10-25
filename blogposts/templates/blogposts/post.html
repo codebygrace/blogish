@@ -8,6 +8,8 @@
 
         {% if user.is_authenticated and post.author.id == user.id %}
             <a href="{% url 'edit_post' post.id %}" class="btn edit-btn">Edit Post</a>
+
+            <a href="{% url 'delete_post' post.id %}" class="btn delete-btn">Delete Post</a>
         {% endif %}
         
         <a href="{% url 'index' %}" class="btn home-btn">Home</a>

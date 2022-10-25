@@ -46,3 +46,8 @@ def update_post(request, id):
         post.text = request.POST.get('text')
         post.save()
     return redirect('/')
+
+def delete_post(request, id):
+    post = Post.objects.get(id=id)
+    post.delete()
+    return render(request, 'blogposts/delete_post.html')
