@@ -1,14 +1,87 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{%block title%} {%endblock%}</title>
+
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap-grid.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    <script src="https://kit.fontawesome.com/6f2d2a6171.js" crossorigin="anonymous"></script>
+
+    <title>{% block title %} Welcome to Blogish! {% endblock %}</title>
 </head>
 <body>
+    {% if request.user.is_authenticated %}
+    <nav class="navbar navbar-expand-lg bg-light mx-auto py-0">
+        <div class="container-fluid">
+            <a href="{% url 'index' %}" class="navbar-brand">
+                <p class="blogish-logo">BLOGISH</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mx-auto mb-1 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                </li>
+                </ul>
+                <ul class="navbar-nav me-2 mb-1 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="{% url 'auth_logout' %}" class="nav-link">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% else %}
+    <nav class="navbar navbar-expand-lg bg-light mx-auto py-0">
+        <div class="container-fluid">
+            <a href="{% url 'index' %}" class="navbar-brand">
+                <p class="blogish-logo">BLOGISH</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mx-auto mb-1 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                </li>
+                </ul>
+                <ul class="navbar-nav me-2 mb-1 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="{% url 'auth_login' %}" class="nav-link">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'registration_register' %}" class="nav-link">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% endif %}
     {% block content %}
 
     {% endblock %}
+    <script src="{% static 'bootstrap/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>

@@ -1,53 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog-ish</title>
-</head>
-<body>
-    {% block content %}
-        {% if request.user.is_authenticated %}
-            <h4 class="welcome">
-                Welcome to Blog-ish!
-            </h4>
-            <p class="you-are">You are logged in as {{ request.user.username }}.<a href="{% url 'auth_logout' %}" class="not-you">Not you?</a></p>
+{% extends 'base.html' %}
 
-            <p class="post-count">There are {{ count }} blogposts available to read.</p>
+{% block content %}
+    {% if request.user.is_authenticated %}
+        <h4 class="welcome">
+            Welcome to Blog-ish!
+        </h4>
+        <p class="you-are">You are logged in as {{ request.user.username }}.<a href="{% url 'auth_logout' %}" class="not-you">Not you?</a></p>
 
-            <a href="{% url 'new_post' %}" class="btn new-btn">Create a Post</a>
+        <p class="post-count">There are {{ count }} blogposts available to read.</p>
 
-            <div class="post-container flex">
-                {% for post in posts %}
-                    <div class="post-item">
-                        <a href="{% url 'post' post.id %}" class="post-link">{{ post.title }}</a>
-                        <p class="post-author">{{ post.author }}</p>
-                        <p class="post-date">{{ post.publish_date }}</p>
-                    </div>
-                {% endfor %}
-            </div>
-        {% else %}
-            <h4 class="welcome">
-                Welcome to Blog-ish!
-            </h4>
+        <a href="{% url 'new_post' %}" class="btn new-btn">Create a Post</a>
 
-            <p class="login-cta">
-                Please <a href="{% url 'auth_login' %}" class="login-link">Login</a> to create, edit, or delete a post.
-            </p>
+        <div class="post-container flex">
+            {% for post in posts %}
+                <div class="post-item">
+                    <a href="{% url 'post' post.id %}" class="post-link">{{ post.title }}</a>
+                    <p class="post-author">{{ post.author }}</p>
+                    <p class="post-date">{{ post.publish_date }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <h4 class="welcome">
+            Welcome to Blog-ish!
+        </h4>
 
-            <p class="post-count">There are {{ count }} blogposts available to read.</p>
+        <p class="login-cta">
+            Please <a href="{% url 'auth_login' %}" class="login-link">Login</a> to create, edit, or delete a post.
+        </p>
 
-            <div class="post-container flex">
-                {% for post in posts %}
-                    <div class="post-item">
-                        <a href="{% url 'post' post.id %}" class="post-link">{{ post.title }}</a>
-                        <p class="post-author">{{ post.author }}</p>
-                        <p class="post-date">{{ post.publish_date }}</p>
-                    </div>
-                {% endfor %}
-            </div>
-        {% endif %}
-    {% endblock %}
-</body>
-</html>
+        <p class="post-count">There are {{ count }} blogposts available to read.</p>
+
+        <div class="post-container flex">
+            {% for post in posts %}
+                <div class="post-item">
+                    <a href="{% url 'post' post.id %}" class="post-link">{{ post.title }}</a>
+                    <p class="post-author">{{ post.author }}</p>
+                    <p class="post-date">{{ post.publish_date }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endblock %}
