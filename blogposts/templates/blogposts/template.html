@@ -1,44 +1,52 @@
 {% extends 'base.html' %}
 
+{% block title %} Home - Blogish {% endblock %}
+
 {% block content %}
     {% if request.user.is_authenticated %}
-        <h4 class="welcome">
-            Welcome to Blog-ish!
-        </h4>
-        <p class="you-are">You are logged in as {{ request.user.username }}.<a href="{% url 'auth_logout' %}" class="not-you">Not you?</a></p>
+        <main class="page-container flex">
+            <h4 class="welcome">
+                Welcome to BLOGISH!
+            </h4>
+            <p class="you-are">You are logged in as {{ request.user.username }}. <a href="{% url 'auth_logout' %}" class="not-you">Not you?</a> </p>
 
-        <p class="post-count">There are {{ count }} blogposts available to read.</p>
+            <p class="post-count">There are {{ count }} blogposts available to read.</p>
 
-        <a href="{% url 'new_post' %}" class="btn new-btn">Create a Post</a>
+            <a href="{% url 'new_post' %}" class="btn new-btn">Create a Post</a>
 
-        <div class="post-container flex">
-            {% for post in posts %}
-                <div class="post-item">
-                    <a href="{% url 'post' post.id %}" class="post-link">{{ post.title }}</a>
-                    <p class="post-author">{{ post.author }}</p>
-                    <p class="post-date">{{ post.publish_date }}</p>
-                </div>
-            {% endfor %}
-        </div>
+            <div class="post-container flex">
+                {% for post in posts %}
+                    <div class="post-item">
+                        <a href="{% url 'post' post.id %}" class="post-link">{{ post.title }}</a>
+                        <br>
+                        <p class="post-author">{{ post.author }}</p>
+                        <p class="post-date">{{ post.publish_date }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </main>
     {% else %}
-        <h4 class="welcome">
-            Welcome to Blog-ish!
-        </h4>
+        <main class="page-container flex">
+            <h4 class="welcome">
+                Welcome to BLOGISH!
+            </h4>
 
-        <p class="login-cta">
-            Please <a href="{% url 'auth_login' %}" class="login-link">Login</a> to create, edit, or delete a post.
-        </p>
+            <p class="login-cta">
+                Please <a href="{% url 'auth_login' %}" class="login-link">Login</a> to create, edit, or delete a post.
+            </p>
 
-        <p class="post-count">There are {{ count }} blogposts available to read.</p>
+            <p class="post-count">There are {{ count }} blogposts available to read.</p>
 
-        <div class="post-container flex">
-            {% for post in posts %}
-                <div class="post-item">
-                    <a href="{% url 'post' post.id %}" class="post-link">{{ post.title }}</a>
-                    <p class="post-author">{{ post.author }}</p>
-                    <p class="post-date">{{ post.publish_date }}</p>
-                </div>
-            {% endfor %}
-        </div>
+            <div class="post-container flex">
+                {% for post in posts %}
+                    <div class="post-item flex">
+                        <a href="{% url 'post' post.id %}" class="post-link">{{ post.title }}</a>
+                        <br>
+                        <p class="post-author">{{ post.author }}</p>
+                        <p class="post-date">{{ post.publish_date }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </main>
     {% endif %}
 {% endblock %}
