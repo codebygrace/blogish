@@ -3,24 +3,20 @@
 {% block title %} Create A Post - Blogish {% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container create-container">
     <h1>Create a New Post</h1>
     <form action="/post/new/" method="post">
         {% csrf_token %}
         <div class="form-row">
-            <label>
-                Title:
-                <input type="text" name="title" class="post-title" required>
-            </label>
+            <label class="title-lbl">Title:</label>
+            <input type="text" name="title" class="post-title" required>
         </div>
         <div class="form-row">
             <p class="author">Author: <span class="user-box">{{ user }}</span></p>
         </div>
         <div class="form-row">
-            <label>
-                Text:
-                <textarea name="text" cols="30" rows="10" class="post-text" required></textarea>
-            </label>
+            <label class="text-lbl">Text:</label>
+            <textarea name="text" cols="30" rows="8" class="post-text" required></textarea>
         </div>
         <button type="submit" class="btn create-btn">Create Post</button>
     </form>

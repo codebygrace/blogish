@@ -11,7 +11,11 @@
     {% if user.is_authenticated and post.author.id == user.id %}
     <a href="{% url 'edit_post' post.id %}" class="btn edit-btn">Edit Post</a>
 
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <a href="{% url 'index' %}" class="btn home-link">Home</a>
+
+    <br>
+
+    <button type="button" class="delete-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Delete Post
     </button>
       
@@ -27,13 +31,11 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <a href="{% url 'delete_post' post.id %}" class="btn delete-btn">Delete Post</a>
+                    <a href="{% url 'delete_post' post.id %}" class="delete-modal">Delete Post</a>
                 </div>
             </div>
         </div>
     </div>
     {% endif %}
-    
-    <a href="{% url 'index' %}" class="btn home-btn">Home</a>
 </div>
 {% endblock %}
