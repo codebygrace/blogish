@@ -52,8 +52,5 @@ def delete_post(request, id):
     post.delete()
     return render(request, 'blogposts/delete_post.html')
 
-def about_page(request):
-    return render(request, 'blogposts/about.html')
-
-def contact_page(request):
-    return render(request, 'blogposts/contact.html')
+def about_contact_page(request):
+    return render(request, 'blogposts/about_contact.html')
