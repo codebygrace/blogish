@@ -58,12 +58,12 @@
 }
 
 /* DELETE POST */
-.del-container {
+.action-container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.delete-msg {
+.action-msg {
     margin-bottom: 1rem;
 }

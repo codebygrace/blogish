@@ -1,0 +1,49 @@
+.account-title {
+    margin-bottom: 2rem;
+}
+
+/* LOGIN */
+.account-container,
+.form-container,
+.login-form,
+.register-form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-container {
+    background-color: rgba(205, 198, 174, 0.5);
+    border: 5px solid #2C4251;
+    border-radius: 15px;
+    width: 40%;
+    height: 75vh;
+}
+
+.login-form {
+    font-size: 20px;
+}
+
+.login-form > * {
+    padding: 10px;
+}
+
+.login-btn {
+    font-size: 20px;
+    width: 50%;
+}
+
+/* REGISTRATION */
+.register-container {
+    width: 60%;
+    height: 75vh;
+}
+
+.register-form {
+    align-items: flex-start;
+}
+
+.register-btn {
+    align-self: center;
+    width: 30%;
+}

@@ -3,10 +3,15 @@
 {% block title %} Login - Blogish {% endblock %}
 
 {% block content %}
-<form action="." method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Log In">
-    <input type="hidden" name="next" value="{{next}}">
-</form>
+    <div class="container account-container flex">
+        <h1 class="account-title">Login to Blogish</h1>
+        <div class="form-container">
+            <form class="login-form flex" action="." method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input class="btn login-btn" type="submit" value="Log In">
+                <input type="hidden" name="next" value="{{next}}">
+            </form>
+        </div>
+    </div>
 {% endblock %}

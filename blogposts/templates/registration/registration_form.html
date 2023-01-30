@@ -3,9 +3,14 @@
 {% block title %} Sign Up - Blogish {% endblock %}
 
 {% block content %} 
-<form action="" method="post">
-    {% csrf_token %} 
-    {{ form.as_p }}
-    <input type="submit" value="Register">
-</form>
+<div class="container account-container register-container flex">
+    <h1 class="account-title">Sign Up for Blogish</h1>
+    <div class="form-container">
+        <form class="register-form flex" action="" method="post">
+            {% csrf_token %} 
+            {{ form.as_p }}
+            <input class="btn register-btn" type="submit" value="Sign Up">
+        </form>
+    </div>
+</div>
 {% endblock %}

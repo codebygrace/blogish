@@ -3,5 +3,8 @@
 {% block title %} Logged Out - Blogish {% endblock %}
 
 {% block content %} 
-<h1>See you soon!</h1>
+    <div class="action-container container flex">
+        <h1 class="action-msg">See you soon!</h1>
+        <a href="{% url 'index' %}" class="btn home-btn">Home</a>
+    </div>
 {% endblock %}
