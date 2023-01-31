@@ -1,0 +1,29 @@
+.aux-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aux-title {
+    margin-bottom: 2rem;
+}
+
+.aux-text {
+    font-size: 20px;
+}
+
+/* ABOUT AND CONTACT */
+.aux-link {
+    font-size: 25px;
+    margin: 1rem;
+}
+
+.about-link {
+    font-size: 20px;
+    margin: 0;
+}
+
+.contact-items {
+    justify-content: center;
+    align-items: center;
+}

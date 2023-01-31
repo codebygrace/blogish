@@ -57,6 +57,10 @@ a:hover {
     text-decoration: none;
 }
 
+.nav-item {
+    padding: 5px;
+}
+
 .nav-link {
     color: #000;
     border: 5px solid transparent;
@@ -69,6 +73,23 @@ a:hover {
     background-color: #2C4251;
     color: #FFF;
     text-decoration: none;
+}
+
+.navbar-toggler {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    color: transparent;
+    background-color: #2C4251;
+    border: 1px solid transparent;
+}
+
+.menu-bar {
+    display: block;
+    width: 90%;
+    border: 1.50px solid #FFF;
+    border-radius: 5px;
+    margin: 5px auto;
 }
 
 /* TEMPLATE */

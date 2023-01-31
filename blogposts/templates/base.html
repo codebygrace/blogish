@@ -17,8 +17,6 @@
     <link rel="stylesheet" href="{% static 'css/accounts.css' %}">
     <link rel="stylesheet" href="{% static 'css/auxiliary.css' %}">
 
-    <script src="https://kit.fontawesome.com/6f2d2a6171.js" crossorigin="anonymous"></script>
-
     <title>{% block title %} Welcome to Blogish! {% endblock %}</title>
 </head>
 <body>
@@ -54,7 +52,9 @@
         <div class="nav-container container-fluid">
             <a href="{% url 'index' %}" class="blogish-logo">blogish</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mx-auto mb-1 mb-lg-0">
