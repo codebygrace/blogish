@@ -1,0 +1,160 @@
+@media screen and (max-width: 1024px) {
+    /* ACCOUNTS */
+    .account-container {
+        width: 60%;
+    }
+
+    .register-container {
+        width: 75%;
+    }
+
+    .register-form {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* ACCOUNTS */
+    .account-container {
+        width: 80%;
+    }
+
+    .register-container {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* POST */
+
+    /* ACCOUNTS */
+    .account-container {
+        width: 90%;
+    }
+
+    .register-container {
+        width: 95%;
+    }
+
+    /* AUXILIARY */
+    .aux-container {
+        margin: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 176px) {
+    /* UTILITIES */
+
+    /* MAIN */
+    .welcome {
+        margin-top: 0.5rem;
+    }
+    
+    .page-container {
+        margin: 1rem auto;
+        text-align: center;
+    }
+    
+    .new-btn {
+        margin-bottom: 0.5rem;
+    }
+    
+    .card-container {
+        margin: auto 1rem;
+        gap: 1rem;
+    }
+    
+    .card-item {
+        width: 160px;
+        height: 125px;
+    }
+    
+    .card-item > * {
+        margin-bottom: 2px;
+    }
+    
+    .card-link {
+        font-size: 15px;
+    }
+
+    /* POST */
+    .post-container {
+        text-align: left;
+        margin: 0.5rem;
+    }
+
+    .home-link {
+        width: 95%;
+    }
+
+    /* ACCOUNTS */
+    .account-container {
+        width: 90%;
+    }
+
+    .account-title {
+        font-size: 15px;
+        margin-bottom: 1rem;
+    }
+
+    .login-form {
+        font-size: 12px;
+    }
+    
+    .login-form > * {
+        padding: 5px;
+    }
+    
+    .login-btn {
+        width: 90%;
+        font-size: 15px;
+    }
+
+    .register-container {
+        width: 90%;
+        height: auto;
+        padding: 0.5rem;
+        text-align: center;
+    }
+    
+    .register-form {
+        font-size: 10px;
+    }
+
+    .register-form > * {
+        margin: 10px auto;
+        padding: 5px;
+    }
+    
+    .register-btn {
+        align-self: center;
+        width: 90%;
+    }
+
+    /* AUXILIARY */
+    .aux-container {
+        margin: 1rem;
+        text-align: center;
+    }
+
+    .aux-title {
+        margin-bottom: 0.5rem;
+    }
+
+    .aux-text {
+        font-size: 15px;
+    }
+    
+    .aux-link {
+        font-size: 20px;
+        margin: 0.5rem;
+    }
+
+    .fine-text {
+        padding-left: 0;
+    }    
+
+    .about-link {
+        font-size: 15px;
+    }
+}

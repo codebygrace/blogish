@@ -4,7 +4,7 @@
 
 {% block content %}
     {% if request.user.is_authenticated %}
-        <main class="page-container flex">
+        <div class="page-container flex">
             <h4 class="welcome">
                 Welcome to BLOGISH!
             </h4>
@@ -14,19 +14,19 @@
 
             <a href="{% url 'new_post' %}" class="btn new-btn">Create a Post</a>
 
-            <div class="post-container flex">
+            <div class="card-container flex">
                 {% for post in posts %}
-                    <div class="post-item">
-                        <a href="{% url 'post' post.id %}" class="post-link">{{ post.title }}</a>
+                    <div class="card-item">
+                        <a href="{% url 'post' post.id %}" class="card-link">{{ post.title }}</a>
                         <br>
-                        <p class="post-author">{{ post.author }}</p>
-                        <p class="post-date">{{ post.publish_date }}</p>
+                        <p class="card-author">{{ post.author }}</p>
+                        <p class="card-date">{{ post.publish_date }}</p>
                     </div>
                 {% endfor %}
             </div>
-        </main>
+        </div>
     {% else %}
-        <main class="page-container flex">
+        <div class="page-container flex">
             <h4 class="welcome">
                 Welcome to BLOGISH!
             </h4>
@@ -37,16 +37,16 @@
 
             <p class="post-count">There are {{ count }} blogposts available to read.</p>
 
-            <div class="post-container flex">
+            <div class="card-container flex">
                 {% for post in posts %}
-                    <div class="post-item flex">
-                        <a href="{% url 'post' post.id %}" class="post-link">{{ post.title }}</a>
+                    <div class="card-item flex">
+                        <a href="{% url 'post' post.id %}" class="card-link">{{ post.title }}</a>
                         <br>
-                        <p class="post-author">{{ post.author }}</p>
-                        <p class="post-date">{{ post.publish_date }}</p>
+                        <p class="card-author">{{ post.author }}</p>
+                        <p class="card-date">{{ post.publish_date }}</p>
                     </div>
                 {% endfor %}
             </div>
-        </main>
+        </div>
     {% endif %}
 {% endblock %}

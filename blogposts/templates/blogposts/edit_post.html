@@ -3,21 +3,21 @@
 {% block title %} Edit Post - Blogish {% endblock %}
 
 {% block content %}
-    <div class="container edit-container">
+    <div class="page-container edit-container">
         <h1>Edit Your Post</h1>
         <form action="/post/{{ post.id }}/update" method="POST">
             {% csrf_token %}
             {% if request.method == 'GET' %}
                 <div class="form-row">
                     <label class="title-lbl">Title:</label>
-                    <input type="text" name="title" value="{{ post.title }}" class="post-title">
+                    <input type="text" name="title" value="{{ post.title }}" class="field-title">
                 </div>
                 <div class="form-row">
                     <p class="author">Author: <span class="user-box">{{ user }}</span></p>
                 </div>    
                 <div class="form-row">
                     <label class="text-lbl">Text:</label>
-                    <textarea name="text" cols="30" rows="8" class="post-text">{{ post.text }}</textarea>
+                    <textarea name="text" cols="30" rows="8" class="field-text">{{ post.text }}</textarea>
                 </div>
             {% endif %}
             <button type="submit" class="btn save-btn">Save Post</button>

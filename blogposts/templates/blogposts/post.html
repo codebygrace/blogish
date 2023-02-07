@@ -3,10 +3,12 @@
 {% block title %} {{ post.title }} - Blogish {% endblock %}
 
 {% block content %}
-<div class="container">
-    <h1>{{ post.title }}</h1>
-    <p>{{ post.author}} ({{ post.publish_date }})</p>
-    <p>{{ post.text }}</p>
+<div class="page-container post-container">
+    <h1 class="post-title">{{ post.title }}</h1>
+    <p class="post-author">{{ post.author}} ({{ post.publish_date }})</p>
+    <p class="post-text">{{ post.text }}</p>
+
+    <a href="{% url 'index' %}" class="btn home-link">Home</a>
 
     {% if user.is_authenticated and post.author.id == user.id %}
     <a href="{% url 'edit_post' post.id %}" class="btn edit-btn">Edit Post</a>

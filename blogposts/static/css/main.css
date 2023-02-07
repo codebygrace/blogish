@@ -101,20 +101,21 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 2rem auto;
 }
 
 .new-btn {
     margin-bottom: 1rem;
 }
 
-.post-container {
+.card-container {
     margin: auto 2rem;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
 }
 
-.post-item {
+.card-item {
     background-color:rgba(205, 198, 174, 0.5);
     border: 5px solid #2C4251;
     border-radius: 15px;
@@ -125,24 +126,24 @@ a:hover {
     justify-content: center;
 }
 
-.post-item > * {
+.card-item > * {
     margin-bottom: 2px;
 }
 
-.post-link {
+.card-link {
     font-size: 18px;
     font-weight: 700;
     color: rgba(44, 66, 81, 0.85);
 }
 
-.post-link:hover {
+.card-link:hover {
     color: #2C4251;
 }
 
-.post-author {
+.card-author {
     font-style: italic;
 }
 
-.post-date {
-    color: rgba(0, 0, 0, 0.50);
+.card-date {
+    color: rgba(0, 0, 0, 0.75);
 }

@@ -1,6 +1,7 @@
 /* VIEW POST */
-.container {
-    margin: 2rem auto;
+.post-author,
+.post-text {
+    font-size: 25px;
 }
 
 .delete-link {
@@ -39,16 +40,16 @@
     font-weight: 400;
 }
 
-.post-title,
-.post-text {
+.field-title,
+.field-text {
     width: 100%;
 }
 
-.post-title {
+.field-title {
     padding: 5px;
 }
 
-.post-text {
+.field-text {
     padding: 10px;
     resize: none;
 }

@@ -1,8 +1,8 @@
+/* UTILITIES */
 .account-title {
     margin-bottom: 2rem;
 }
 
-/* LOGIN */
 .account-container,
 .form-container,
 .login-form,
@@ -20,6 +20,7 @@
     height: 75vh;
 }
 
+/* LOGIN */
 .login-form {
     font-size: 20px;
 }
@@ -37,11 +38,12 @@
 .register-container {
     width: 60%;
     height: 75vh;
+    text-align: left;
 }
 
-.register-form {
-    align-items: flex-start;
-}
+/* .register-form {
+    text-align: left;
+} */
 
 .register-btn {
     align-self: center;
