@@ -16,8 +16,9 @@
     background-color: rgba(205, 198, 174, 0.5);
     border: 5px solid #2C4251;
     border-radius: 15px;
-    width: 40%;
+    width: 50%;
     height: 75vh;
+    margin: 2rem auto;
 }
 
 /* LOGIN */
@@ -29,21 +30,31 @@
     padding: 10px;
 }
 
+.nonfield {
+    font-size: 18px;
+    text-align: center;
+    list-style: none;
+}
+
 .login-btn {
     font-size: 20px;
     width: 50%;
+}
+
+/* LOG OUT */
+.out-home-btn {
+    width: 25%;
 }
 
 /* REGISTRATION */
 .register-container {
     width: 60%;
     height: 75vh;
-    text-align: left;
 }
 
-/* .register-form {
-    text-align: left;
-} */
+.register-form {
+    align-items: start;
+}
 
 .register-btn {
     align-self: center;

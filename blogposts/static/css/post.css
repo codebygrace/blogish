@@ -1,11 +1,28 @@
 /* VIEW POST */
-.post-author,
-.post-text {
+.post-container {
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.post-author {
     font-size: 25px;
 }
 
+.post-text {
+    font-size: 20px;
+}
+
+.home-link {
+    margin-right: 0.5rem;
+}
+
+.edit-btn {
+    display: inline-block;
+}
+
 .delete-link {
-    margin-top: 1rem;
     background-color: transparent;
     color: #000;
     border: 1px solid transparent;
@@ -18,7 +35,7 @@
 /* CREATE AND EDIT POST */
 .create-container,
 .edit-container {
-    margin-top: 1rem;
+    margin: 1rem;
 }
 
 .form-row {
@@ -42,7 +59,9 @@
 
 .field-title,
 .field-text {
-    width: 100%;
+    width: 98%;
+    border: 1px solid rgba(0, 0, 0, 0.60);
+    border-radius: 5px;
 }
 
 .field-title {
@@ -66,5 +85,10 @@
 }
 
 .action-msg {
+    text-align: center;
     margin-bottom: 1rem;
+}
+
+.del-home-btn {
+    width: 30%;
 }

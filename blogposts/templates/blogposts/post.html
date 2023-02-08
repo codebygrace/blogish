@@ -3,18 +3,20 @@
 {% block title %} {{ post.title }} - Blogish {% endblock %}
 
 {% block content %}
-<div class="page-container post-container">
+<div class="post-container flex">
     <h1 class="post-title">{{ post.title }}</h1>
     <p class="post-author">{{ post.author}} ({{ post.publish_date }})</p>
     <p class="post-text">{{ post.text }}</p>
 
-    <a href="{% url 'index' %}" class="btn home-link">Home</a>
+    <div class="post-btns flex">
+        <a href="{% url 'index' %}" class="btn home-link">Home</a>
+
+        {% if user.is_authenticated and post.author.id == user.id %}
+        <a href="{% url 'edit_post' post.id %}" class="btn edit-btn">Edit Post</a>
+        {% endif %}
+    </div>
 
     {% if user.is_authenticated and post.author.id == user.id %}
-    <a href="{% url 'edit_post' post.id %}" class="btn edit-btn">Edit Post</a>
-
-    <a href="{% url 'index' %}" class="btn home-link">Home</a>
-
     <br>
 
     <button type="button" class="delete-link" data-bs-toggle="modal" data-bs-target="#exampleModal">

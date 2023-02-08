@@ -1,4 +1,19 @@
 @media screen and (max-width: 1024px) {
+    /* MAIN */
+    .card-item {
+        width: 225px;
+        height: 150px;
+    }
+
+    .card-link {
+        font-size: 20px;
+    }
+
+    .card-author,
+    .card-date {
+        font-size: 18px;
+    }
+    
     /* ACCOUNTS */
     .account-container {
         width: 60%;
@@ -6,34 +21,78 @@
 
     .register-container {
         width: 75%;
-    }
-
-    .register-form {
-        text-align: left;
+        padding: 1rem;
     }
 }
 
 @media screen and (max-width: 768px) {
     /* ACCOUNTS */
     .account-container {
-        width: 80%;
+        width: 90%;
     }
 
     .register-container {
-        width: 85%;
+        width: 90%;
     }
 }
 
 @media screen and (max-width: 480px) {
     /* POST */
-
-    /* ACCOUNTS */
-    .account-container {
-        width: 90%;
+    .post-btns {
+        width: 100%;
     }
 
+    .home-link,
+    .edit-btn {
+        width: 50%;
+    }
+
+    .edit-container,
+    .create-container {
+        width: 95%;
+        margin: 0.5rem;
+    }
+
+    .btn-container {
+        justify-content: center;
+    }
+
+    .save-btn,
+    .create-btn,
+    .home-btn {
+        width: 60%;
+    }
+
+    .modal-content {
+        text-align: center;
+    }
+
+    .modal-title {
+        margin: auto;
+    }
+
+    .btn-secondary {
+        width: 90%;
+        margin: 0.5rem auto;
+    }
+
+    .delete-modal {
+        margin: auto;
+    }
+
+    .del-home-btn,
+    .out-home-btn {
+        width: 60%;
+    }
+
+    /* ACCOUNTS */
     .register-container {
         width: 95%;
+        height: auto;
+    }
+
+    .register-btn {
+        width: 60%;
     }
 
     /* AUXILIARY */
@@ -42,9 +101,8 @@
     }
 }
 
-@media screen and (max-width: 176px) {
-    /* UTILITIES */
-
+@media screen and (max-width: 246px) {
+    /* 245px */
     /* MAIN */
     .welcome {
         margin-top: 0.5rem;
@@ -56,16 +114,17 @@
     }
     
     .new-btn {
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
     }
     
     .card-container {
+        width: 100%;
         margin: auto 1rem;
         gap: 1rem;
     }
     
     .card-item {
-        width: 160px;
+        width: 90%;
         height: 125px;
     }
     
@@ -73,18 +132,64 @@
         margin-bottom: 2px;
     }
     
-    .card-link {
-        font-size: 15px;
-    }
-
     /* POST */
     .post-container {
         text-align: left;
         margin: 0.5rem;
     }
+    
+    .post-btns {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
 
-    .home-link {
+    .home-link,
+    .edit-btn {
         width: 95%;
+        margin: 0.5rem auto;
+    }
+
+    .modal-content {
+        font-size: 15px;
+    }
+
+    .modal-title {
+        font-size: 18px;
+    }
+
+    .post-author {
+        font-size: 18px;
+    }
+
+    .post-text {
+        font-size: 15px;
+    }
+
+    .delete-link {
+        margin: auto;
+    }
+
+    .field-title,
+    .field-text,
+    .save-btn,
+    .create-btn,
+    .home-btn {
+        width: 95%;
+    }
+
+    .field-title,
+    .field-text {
+        font-size: 12px;
+    }
+
+    .delete-msg {
+        font-size: 18px;
+    }
+
+    .del-home-btn,
+    .out-home-btn {
+        width: 90%;
     }
 
     /* ACCOUNTS */

@@ -20,8 +20,12 @@
                     <textarea name="text" cols="30" rows="8" class="field-text">{{ post.text }}</textarea>
                 </div>
             {% endif %}
-            <button type="submit" class="btn save-btn">Save Post</button>
+            <div class="btn-container flex">
+                <button type="submit" class="btn save-btn">Save Post</button>
+            </div>
         </form>
-        <a href="{% url 'index' %}" class="btn home-btn">Home</a>
+        <div class="btn-container flex">
+            <a href="{% url 'index' %}" class="btn home-btn">Home</a>
+        </div>
     </div>
 {% endblock %}

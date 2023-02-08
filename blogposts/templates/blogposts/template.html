@@ -5,14 +5,14 @@
 {% block content %}
     {% if request.user.is_authenticated %}
         <div class="page-container flex">
-            <h4 class="welcome">
-                Welcome to BLOGISH!
-            </h4>
-            <p class="you-are">You are logged in as {{ request.user.username }}. <a href="{% url 'auth_logout' %}" class="not-you">Not you?</a> </p>
-
-            <p class="post-count">There are {{ count }} blogposts available to read.</p>
-
-            <a href="{% url 'new_post' %}" class="btn new-btn">Create a Post</a>
+            <div class="main-text">
+                <h4 class="welcome">Welcome to BLOGISH!</h4>
+                <p class="you-are">You are logged in as {{ request.user.username }}. <a href="{% url 'auth_logout' %}" class="not-you">Not you?</a> </p>
+    
+                <p class="post-count">There are {{ count }} blogposts available to read.</p>
+    
+                <a href="{% url 'new_post' %}" class="btn new-btn">Create a Post</a>
+            </div>
 
             <div class="card-container flex">
                 {% for post in posts %}
@@ -27,19 +27,21 @@
         </div>
     {% else %}
         <div class="page-container flex">
-            <h4 class="welcome">
-                Welcome to BLOGISH!
-            </h4>
-
-            <p class="login-action">
-                Please <a href="{% url 'auth_login' %}" class="login-link">Login</a> to create, edit, or delete a post.
-            </p>
-
-            <p class="post-count">There are {{ count }} blogposts available to read.</p>
+            <div class="main-text">
+                <h4 class="welcome">
+                    Welcome to BLOGISH!
+                </h4>
+    
+                <p class="login-action">
+                    Please <a href="{% url 'auth_login' %}" class="login-link">Login</a> to create, edit, or delete a post.
+                </p>
+    
+                <p class="post-count">There are {{ count }} blogposts available to read.</p>
+            </div>
 
             <div class="card-container flex">
                 {% for post in posts %}
-                    <div class="card-item flex">
+                    <div class="card-item">
                         <a href="{% url 'post' post.id %}" class="card-link">{{ post.title }}</a>
                         <br>
                         <p class="card-author">{{ post.author }}</p>
