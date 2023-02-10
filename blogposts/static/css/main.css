@@ -93,10 +93,6 @@ a:hover {
 }
 
 /* TEMPLATE */
-.welcome {
-    margin-top: 1rem;
-}
-
 .page-container {
     flex-direction: column;
     justify-content: center;
@@ -105,8 +101,8 @@ a:hover {
 }
 
 .main-text {
-    margin: 1rem;
-    font-size: 20px;
+    margin-bottom: 1rem;
+    font-size: 18px;
     text-align: center;
 }
 
@@ -122,8 +118,8 @@ a:hover {
     border: 5px solid #2C4251;
     border-radius: 15px;
     padding: 1rem;
-    width: 250px;
-    height: 175px;
+    width: 25%;
+    overflow-wrap: break-word;
     flex-direction: column;
     justify-content: center;
 }
@@ -133,7 +129,7 @@ a:hover {
 }
 
 .card-link {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
     color: rgba(44, 66, 81, 0.85);
 }
@@ -144,7 +140,7 @@ a:hover {
 
 .card-author,
 .card-date {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .card-author {

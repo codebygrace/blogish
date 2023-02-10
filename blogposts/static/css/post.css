@@ -4,6 +4,7 @@
     align-items: flex-start;
     flex-direction: column;
     margin: 2rem;
+    overflow-wrap: anywhere;
 }
 
 .post-author {

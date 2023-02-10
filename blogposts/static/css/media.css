@@ -1,8 +1,7 @@
 @media screen and (max-width: 1024px) {
     /* MAIN */
     .card-item {
-        width: 225px;
-        height: 150px;
+        width: 25%;
     }
 
     .card-link {
@@ -21,11 +20,15 @@
 
     .register-container {
         width: 75%;
-        padding: 1rem;
     }
 }
 
 @media screen and (max-width: 768px) {
+    /* MAIN */
+    .card-item {
+        width: 45%;
+    }
+
     /* ACCOUNTS */
     .account-container {
         width: 90%;
@@ -88,7 +91,6 @@
     /* ACCOUNTS */
     .register-container {
         width: 95%;
-        height: auto;
     }
 
     .register-btn {
@@ -102,7 +104,6 @@
 }
 
 @media screen and (max-width: 246px) {
-    /* 245px */
     /* MAIN */
     .welcome {
         margin-top: 0.5rem;
@@ -125,7 +126,6 @@
     
     .card-item {
         width: 90%;
-        height: 125px;
     }
     
     .card-item > * {
@@ -150,19 +150,13 @@
         margin: 0.5rem auto;
     }
 
-    .modal-content {
-        font-size: 15px;
-    }
-
-    .modal-title {
-        font-size: 18px;
-    }
-
-    .post-author {
-        font-size: 18px;
-    }
-
+    .modal-content,
     .post-text {
+        font-size: 12px;
+    }
+
+    .modal-title,
+    .post-author {
         font-size: 15px;
     }
 
@@ -184,7 +178,7 @@
     }
 
     .delete-msg {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .del-home-btn,
@@ -217,7 +211,6 @@
 
     .register-container {
         width: 90%;
-        height: auto;
         padding: 0.5rem;
         text-align: center;
     }
